@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css'
-import Otp from './Otp';
+import Otp from './components/Otp';
 import Form from './components/TabForm/Form';
 import AutoCompleteSearchForm from './components/AutoCompleteForm/AutoCompleteSearchForm';
 
