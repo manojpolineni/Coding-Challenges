@@ -1,28 +1,29 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
+      const location = useLocation();
   return (
-    <div className="flex justify-center items-center bg-gray-600 w-full h-16 text-gray-800">
+    <div className="flex justify-center items-center bg-gray-200 w-full h-16 text-gray-800">
       <nav className="ml-10">
         <ul className="flex space-x-4">
           <li>
-            <Link to="/" className="text-white hover:text-gray-400">
+            <Link to="/" className={`hover:text-gray-400 ${location.pathname === '/form' ? 'text-yellow-400 font-semibold' : ''}`}>
               Form
             </Link>
           </li>
           <li>
-            <Link to="/otp" className="text-white hover:text-gray-400">
+            <Link to="/otp" className={`hover:text-gray-400 ${location.pathname === '/otp' ? 'text-yellow-400 font-semibold' : ''}`}>
               OTP
             </Link>
           </li>
           <li>
-            <Link to="/autocomplete" className="text-white hover:text-gray-400">
+            <Link to="/autocomplete" className={`hover:text-gray-400 ${location.pathname === '/autocomplete' ? 'text-yellow-400 font-semibold' : ''}`}>
               AutoComplete
             </Link>
           </li>
           <li>
-            <Link to="/pagination" className="text-white hover:text-gray-400">
+            <Link to="/pagination" className={`hover:text-gray-400 ${location.pathname === '/pagination' ? 'text-yellow-400 font-semibold' : ''}`}>
               Pagination
             </Link>
           </li>

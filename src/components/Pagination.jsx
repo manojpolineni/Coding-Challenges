@@ -36,8 +36,14 @@ const Pagination = () => {
         <>
           <div className="flex flex-col justify-center items-center">
             <ul className=" p-3 rounded-lg flex flex-col justify-center ">
-              {loading && <li className="text-lg font-bold animate-bounce delay-150 duration-500 ">Loading...</li>}
-              {error && <li className="text-lg text-red-600 font-bold">{error}</li>}
+              {loading && (
+                <li className="text-lg font-bold animate-bounce delay-150 duration-500 ">
+                  Loading...
+                </li>
+              )}
+              {error && (
+                <li className="text-lg text-red-600 font-bold">{error}</li>
+              )}
               {currentItems &&
                 currentItems?.map((post, index) => (
                   <li key={index} className="py-2 text-lg font-bold ">
@@ -57,8 +63,10 @@ const Pagination = () => {
                 <button
                   key={i}
                   onClick={() => setCurrentPage(i + 1)}
-                  className={`px-3 py-1 border rounded ${
-                    currentPage === i + 1 ? "bg-blue-500 text-white" : ""
+                  className={`px-3 py-1 border rounded cursor-pointer ${
+                    currentPage === i + 1
+                      ? "bg-blue-500 cursor-pointer text-white"
+                      : ""
                   }`}
                 >
                   {i + 1}
@@ -68,7 +76,7 @@ const Pagination = () => {
               <button
                 disabled={currentPage === totalPages}
                 onClick={() => setCurrentPage(currentPage + 1)}
-                className="px-3 py-1 border rounded disabled:opacity-50"
+                className="px-3 py-1 border cursor-pointer rounded disabled:opacity-50"
               >
                 Next
               </button>
