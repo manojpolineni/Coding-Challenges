@@ -3,7 +3,7 @@ import './App.css'
 import Otp from './components/Otp';
 import Form from './components/TabForm/Form';
 import AutoCompleteSearchForm from './components/AutoCompleteForm/AutoCompleteSearchForm';
-import { Route, Routes } from 'react-router';
+import { Route, Routes, Navigate } from "react-router";
 import Navbar from './Navbar';
 import Pagination from './components/Pagination';
 
@@ -21,6 +21,8 @@ function App() {
             <Route path="/otp" element={<Otp />} />
             <Route path="/autocomplete" element={<AutoCompleteSearchForm />} />
             <Route path="/pagination" element={<Pagination />} />
+            {/* Redirect to Login for unknown URLs */}
+            <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </div>
       </div>
