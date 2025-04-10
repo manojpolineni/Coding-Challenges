@@ -38,7 +38,7 @@ const AutoCompleteSearchForm = () => {
 
 
       return (
-        <div className="max-w-md mx-auto mt-10 p-6 bg-white shadow rounded">
+        <div className="max-w-md mx-auto mt-10 p-6 bg-white shadow rounded w-full flex justify-start items-start flex-col">
           <h2 className="text-xl font-semibold mb-4">
             Recipe Autocomplete Search
           </h2>
@@ -59,6 +59,17 @@ const AutoCompleteSearchForm = () => {
               </li>
             ))}
           </ul>
+          {/* <div>
+            {results.map((recipe) => (
+              <div
+                key={recipe.id}
+                className="flex flex-col justify-start items-start border-b border-gray-300 py-2"
+              >
+                <h3 className="text-lg font-semibold">{recipe?.name}</h3>
+                <p className="text-sm text-gray-600">{recipe?.description}</p>
+              </div>
+            ))}
+          </div> */}
         </div>
       );
 };

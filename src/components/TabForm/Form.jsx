@@ -21,9 +21,9 @@ const tabs = [
 const Form = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [data, setData] = useState({
-    name: "Manoj",
-    age: 30,
-    email: 'manoj@gmail.com',
+    name: "user",
+    age: 25,
+    email: 'user@gmail.com',
     interests: ['coding', 'reading', 'gaming'],
     theme: 'dark',
   })
@@ -53,7 +53,7 @@ const Form = () => {
 
   return (
     <>
-      <div className="max-w-2xl mx-auto bg-white rounded-lg">
+      <div className="max-w-2xl mx-auto rounded-lg w-full bg-gray-100">
         <div className="flex border-gray-300">
           {tabs.map((tab, index) => (
             <button
@@ -67,7 +67,7 @@ const Form = () => {
             </button>
           ))}
         </div>
-        <div className="p-3 h-50 border w-full rounded-t-0 rounded-b-md">
+        <div className="p-3 h-50 border border-gray-300 w-full rounded-t-0 rounded-md">
           <TabComponent data={data} setData={setData} erros={erros} />
         </div>
         <div className="flex jus gap-3 p-3">

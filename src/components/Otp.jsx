@@ -34,25 +34,27 @@ const Otp = () => {
 
   return (
     <>
-      <h2 className="text-center font-bold text-2xl pb-5">OTP Verification</h2>
-      <div className="flex justify-center items-center">
-        {otpValue.map((digit, index) => (
-          <input
-            key={index}
-            type="text"
-            ref={(el) => {
-              inputRefs.current[index] = el;
-            }}
-            value={digit}
-            onChange={(e) => handleChange({ index, value: e.target.value })}
-            maxLength={1}
-            className="border text-2xl w-10 h-10 mx-1 p-1 text-center rounded-md "
-            onKeyDown={(e) => handleKeyDown({ index, e })}
-          />
-        ))}
+      <div className="flex flex-col justify-start items-center ">
+        <h2 className="text-center font-bold text-2xl pb-5">
+          OTP Verification
+        </h2>
+        <div className="flex justify-center items-center ">
+          {otpValue.map((digit, index) => (
+            <input
+              key={index}
+              type="text"
+              ref={(el) => {
+                inputRefs.current[index] = el;
+              }}
+              value={digit}
+              onChange={(e) => handleChange({ index, value: e.target.value })}
+              maxLength={1}
+              className="border text-2xl w-10 h-10 mx-1 p-1 text-center rounded-md "
+              onKeyDown={(e) => handleKeyDown({ index, e })}
+            />
+          ))}
+        </div>
       </div>
-      {/* Ensure Pagination is imported or defined */}
-      
     </>
   );
 }
