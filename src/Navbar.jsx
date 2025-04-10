@@ -7,7 +7,7 @@ const Navbar = () => {
       <nav className="ml-10">
         <ul className="flex space-x-4">
           <li>
-            <Link to="/form" className="text-white hover:text-gray-400">
+            <Link to="/" className="text-white hover:text-gray-400">
               Form
             </Link>
           </li>
