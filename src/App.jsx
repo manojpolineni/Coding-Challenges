@@ -17,7 +17,7 @@ function App() {
         {/* Pages to render  */}
         <div className="flex-1 flex justify-center items-center w-full">
           <Routes>
-            <Route path="/form" element={<Form />} />
+            <Route path="/" element={<Form />} />
             <Route path="/otp" element={<Otp />} />
             <Route path="/autocomplete" element={<AutoCompleteSearchForm />} />
             <Route path="/pagination" element={<Pagination />} />
