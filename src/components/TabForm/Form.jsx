@@ -82,7 +82,7 @@ const Form = () => {
           >
             Prev
           </button>
-
+          
           <button
             className={`border border-gray-300 px-4 py-2 rounded-md transition-all ${
               activeTab === tabs.length - 1

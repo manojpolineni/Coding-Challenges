@@ -19,6 +19,7 @@ const Pagination = () => {
           } catch (error) {
             console.log(error);
             setError(error);
+            setLoading(false);
           }
         };
         if (items.length === 0) {

@@ -27,6 +27,16 @@ const Navbar = () => {
               Pagination
             </Link>
           </li>
+          <li>
+            <Link to="/timer" className={`hover:text-gray-400 ${location.pathname === '/timer' ? 'text-yellow-400 font-semibold' : ''}`}>
+              Timer
+            </Link>
+          </li>
+          <li>
+            <Link to="/virtualize" className={`hover:text-gray-400 ${location.pathname === '/virtualize' ? 'text-yellow-600 font-semibold' : ''}`}>
+              Virtualization
+            </Link>
+          </li>
         </ul>
       </nav>
     </div>

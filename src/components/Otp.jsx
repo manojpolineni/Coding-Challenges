@@ -7,7 +7,8 @@ const Otp = () => {
 
   const handleChange = ({ index, value })=> {
     let newValue = value.trim();
-    if (!/^\d?$/.test(newValue)) return; 
+    if(newValue.length >1 || isNaN(newValue)) return;
+    // if (!/^\d?$/.test(newValue)) return; 
 
     let newOtp = [...otpValue];
     newOtp[index] = newValue;
@@ -43,6 +44,7 @@ const Otp = () => {
             <input
               key={index}
               type="text"
+              placeholder='0'
               ref={(el) => {
                 inputRefs.current[index] = el;
               }}

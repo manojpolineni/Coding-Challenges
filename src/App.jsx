@@ -6,6 +6,8 @@ import AutoCompleteSearchForm from './components/AutoCompleteForm/AutoCompleteSe
 import { Route, Routes, Navigate } from "react-router";
 import Navbar from './Navbar';
 import Pagination from './components/Pagination';
+import Timer from './components/Timer';
+import Virtualization from './components/Virtualization';
 
 function App() {
 
@@ -21,6 +23,8 @@ function App() {
             <Route path="/otp" element={<Otp />} />
             <Route path="/autocomplete" element={<AutoCompleteSearchForm />} />
             <Route path="/pagination" element={<Pagination />} />
+            <Route path='/timer' element={<Timer />} />
+            <Route path='/virtualize' element={<Virtualization/>}/>
             {/* Redirect to Login for unknown URLs */}
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
